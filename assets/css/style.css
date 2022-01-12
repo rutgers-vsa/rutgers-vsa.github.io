@@ -16,8 +16,20 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5, h6 {
   font-family: "Raleway", sans-serif;
+}
+h4{
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size; inherit;
+  line-height: inherit;
+}
+
+@font-face{
+  font-family: ToJapan
+  src: url("assets/fonts/To Japan.ttf");
+
 }
 
 /*--------------------------------------------------------------
@@ -665,7 +677,7 @@ section {
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
-  margin: 0;
+  margin: 0;.
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -708,6 +720,93 @@ section {
 }
 
 /*--------------------------------------------------------------
+# BOARD FOOTER
+--------------------------------------------------------------*/
+.board .member-wrap::before{
+  content: "";  
+  position: relative;
+  transition: all ease-in-out 0.1s;
+  z-index: 2;
+  opacity: 0;
+  transform: scale(0.92,0.88) translate(0%, -32px);
+  overflow: hidden;
+}
+
+
+.board .member-info{
+  float: left;
+  margin: 0 30 px;
+  position: relative;
+  top: 8px;
+  color: #272829;
+}
+
+
+.summary_rectangle
+{
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; 
+}
+
+
+.board .member-wrap{
+  position: relative; 
+  overflow: hidden; 
+  display: inline-block;
+  height: 390px;
+}
+
+.board .member-wrap img{
+  transition: transform .5s ease;
+  overflow: hidden;
+}
+
+.board .member-wrap:hover img{
+  transform: scale(1.15);
+  overflow: hidden;
+}
+
+.summary_rectangle:hover span{
+  animation: glitchText 0.4s linear;
+}
+
+.board .member-wrap:hover::before {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.board .member-wrap:hover .memberhover-info {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.board .social{
+  font-family: "Raleway", sans-serif;
+  font-style: bold;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+  position: relative; 
+  font-size: 12px;
+  letter-spacing: .12em;
+  padding: 3px 10px 2px;
+  box-sizing:
+  margin: 0px auto;
+  background:#F44462;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+
+-------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
@@ -1183,3 +1282,4 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
